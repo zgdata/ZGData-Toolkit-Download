@@ -1,0 +1,10 @@
+ZGData Toolkit - Release Notes
+
+Verzija: 1.0.0
+Datum: 2026-07-13
+
+- Početna distribucijska verzija alata.
+- Dijagnostika internetske i mrezne veze.
+- Pracenje pinga, TCP dostupnosti i iPerf testova.
+- Izrada HTML izvjestaja.
+- Podrska: toolkit@zgdata.hr
