@@ -1,32 +1,53 @@
-﻿ZGData Toolkit - Release Notes
+﻿ZgData Toolkit - Novosti i povijest verzija
+================================================
 
-Verzija: 1.1.0
+Verzija 1.1.0 - Multi-cloud izdanje
 Datum: 14.07.2026.
 
 NOVO
-- Single target i Compare cloud targets način rada.
-- Usporedno testiranje Alwyzon i Hetzner dijagnostičkih nodeova.
-- Priprema za naknadno uključivanje DataBox nodea.
-- Paralelni ping monitoring svih odabranih targeta.
-- Sekvencijalni iPerf3 upload i download testovi.
-- Zajednička tablica rezultata svih cloud targeta.
-- Best measured network path analiza.
-- Objedinjene usporedne tablice u HTML izvještaju.
-- Detaljni grafovi po targetu dostupni na klik.
-- Prikaz internet providera, javne IP adrese, ASN-a i lokacije klijenta.
-- Procjena trajanja usporednog testa.
-- Warm-up ping prije početka mjerenja.
+- Dodani načini rada Single target i Compare cloud targets.
+- Omogućena usporedna dijagnostika prema Alwyzon i Hetzner cloud targetima.
+- DataBox target pripremljen je u konfiguraciji i aktivirat će se nakon podizanja virtualnog servera.
+- Kontinuirani ping prema svim odabranim targetima izvodi se paralelno.
+- iPerf3 upload i download testovi izvode se strogo sekvencijalno kako se međusobno ne bi zagušivali.
+- Extended i Burn-In profili rotiraju periodična iPerf mjerenja između odabranih targeta.
+- Dodani su zasebni DNS i traceroute rezultati za svaki cloud target.
+- Dodana je analiza Best measured network path.
+- Results u aplikaciji prikazuje sve odabrane targete u jednoj usporednoj tablici.
+- HTML report sadrži objedinjene side-by-side tablice za ping, Internet Quality, iPerf3, DNS i traceroute.
+- Detaljni grafovi po targetu ostaju dostupni i otvaraju se klikom.
+- Dodan je prikaz internet providera/organizacije klijenta, javne IP adrese, ASN-a i približne lokacije.
+- Dodana je procjena trajanja usporednog testa.
+- Dodani su deployment i verification alati za Linux dijagnostičke nodeove.
 
-ISPRAVLJENO
-- Status i postotak sada su vidljivi unutar progress bara.
-- Puni tekst Compare cloud targets više se ne reže.
-- Results prikazuje rezultate svih odabranih providera.
+POBOLJŠANO I ISPRAVLJENO
+- Dodani su warm-up pingovi prije početka mjerenja; warm-up ne ulazi u packet loss, availability, grafove ni incidente.
+- Stvarni timeout nakon početka mjerenja i dalje se potpuno bilježi.
+- Status i postotak testa sada su prikazani unutar progress bara i vidljivi su na manjim ekranima.
+- Ispravljen je odrezani tekst Compare cloud targets.
 - Quick profil jasno navodi da traceroute nije uključen.
-- Poboljšan prikaz na manjim ekranima.
-- Početni warm-up ping ne ulazi u statistiku packet lossa.
+- Poboljšan je prikaz usporednih rezultata i navigacija kroz HTML report.
+- SQL test ostao je zaseban i opcionalan; ne prijavljuje se u bazu i provjerava samo DNS i TCP dostupnost.
+
+INFRASTRUKTURA
+- Alwyzon: centralni API/dashboard i primarni dijagnostički node - diag.zgdata.hr.
+- Hetzner Falkenstein: dodatni dijagnostički node - diag-hetzner.zgdata.hr, TCP 5201.
+- Sačuvan je postojeći SVN servis na Hetzner serveru, TCP 3690.
+- DataBox: pripremljen za naknadnu aktivaciju - diag-databox.zgdata.hr.
 
 NAPOMENA
-Usporedba predstavlja izmjerene mrežne putove tijekom konkretnog testa.
-Ne predstavlja ukupnu ocjenu ili rangiranje cloud providera.
+Usporedba predstavlja izmjerene mrežne putove tijekom konkretnog testa. Ne predstavlja ukupnu ocjenu ili rangiranje cloud providera. Za odluku o migraciji treba dodatno uzeti u obzir cijenu, SLA, podršku, sigurnost, backup, računalne resurse i ponovljena mjerenja u različito vrijeme.
+
+
+Verzija 1.0.0 - Početno izdanje
+Datum: 13.07.2026.
+
+- Početna distribucijska verzija Windows WPF aplikacije na .NET 8.
+- Dodani profili Quick, Standard, Extended i Burn-In.
+- Dodani Internet Quality, kontinuirani ping, opcionalni SQL TCP monitoring, iPerf3 upload/download, DNS i traceroute.
+- Extended i Burn-In omogućuju periodična iPerf mjerenja kroz vrijeme.
+- Dodan STOP s izradom djelomičnog HTML reporta.
+- Dodane informacije o računalu, mrežnim adapterima, incident timeline i inline SVG grafikoni.
+- Izrađen self-contained Windows x64 paket bez potrebe za zasebnom instalacijom .NET runtimea.
 
 Podrška: toolkit@zgdata.hr
