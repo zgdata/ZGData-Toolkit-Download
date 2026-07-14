@@ -1,10 +1,32 @@
-ZGData Toolkit - Release Notes
+﻿ZGData Toolkit - Release Notes
 
-Verzija: 1.0.0
-Datum: 2026-07-13
+Verzija: 1.1.0
+Datum: 14.07.2026.
 
-- Početna distribucijska verzija alata.
-- Dijagnostika internetske i mrezne veze.
-- Pracenje pinga, TCP dostupnosti i iPerf testova.
-- Izrada HTML izvjestaja.
-- Podrska: toolkit@zgdata.hr
+NOVO
+- Single target i Compare cloud targets način rada.
+- Usporedno testiranje Alwyzon i Hetzner dijagnostičkih nodeova.
+- Priprema za naknadno uključivanje DataBox nodea.
+- Paralelni ping monitoring svih odabranih targeta.
+- Sekvencijalni iPerf3 upload i download testovi.
+- Zajednička tablica rezultata svih cloud targeta.
+- Best measured network path analiza.
+- Objedinjene usporedne tablice u HTML izvještaju.
+- Detaljni grafovi po targetu dostupni na klik.
+- Prikaz internet providera, javne IP adrese, ASN-a i lokacije klijenta.
+- Procjena trajanja usporednog testa.
+- Warm-up ping prije početka mjerenja.
+
+ISPRAVLJENO
+- Status i postotak sada su vidljivi unutar progress bara.
+- Puni tekst Compare cloud targets više se ne reže.
+- Results prikazuje rezultate svih odabranih providera.
+- Quick profil jasno navodi da traceroute nije uključen.
+- Poboljšan prikaz na manjim ekranima.
+- Početni warm-up ping ne ulazi u statistiku packet lossa.
+
+NAPOMENA
+Usporedba predstavlja izmjerene mrežne putove tijekom konkretnog testa.
+Ne predstavlja ukupnu ocjenu ili rangiranje cloud providera.
+
+Podrška: toolkit@zgdata.hr
