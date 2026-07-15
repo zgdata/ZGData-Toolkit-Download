@@ -1,6 +1,41 @@
 ﻿ZgData Toolkit - Novosti i povijest verzija
 ================================================
 
+Verzija 1.2.0 - Apross Client Monitor i SQL korelacija
+Datum: 15.07.2026.
+
+NOVO - APROSS CLIENT MONITOR
+- Dodan je poseban Apross Client Monitor za lokalno pokrenuti Apross.exe.
+- Proces se odabire prema PID-u, Windows korisniku, vremenu pokretanja i naslovu prozora.
+- Prate se glavni proces, child procesi, WebView2 i pomoćni report/browser procesi.
+- Bilježe se CPU, RAM, private memory, handles, GDI, USER objekti i Responding/Not responding stanje.
+- TCP veze povezuju se s konkretnim procesom i PID-om.
+- Endpointi se klasificiraju kao SQL, Web/API, file share, file transfer, mail ili ostalo.
+- Backend se označava kao This computer, Local/LAN ili Public/cloud.
+- Dodan je PROBLEM HAPPENED marker za točno označavanje trenutka zastoja.
+- Izrađuju se HTML report i CSV datoteke za procesne uzorke, konekcije i timeline.
+- Opcionalni detailed packet trace radi kružnu Windows ETL snimku kada je Toolkit pokrenut kao administrator.
+
+NOVO - SQL LIVE CORRELATION
+- Toolkit otvara zasebnu SQL monitoring konekciju.
+- Lokalni TCP port Apross procesa povezuje se sa SQL Server sesijom.
+- Prikazuju se SPID, SQL login, program name, baza, status, command i trajanje requesta.
+- Prikazuju se wait type, wait time i blocking session ID.
+- Prikazuju se CPU, logical reads, reads, writes i broj otvorenih transakcija.
+- SQL tekst može se opcionalno uključiti.
+- Dodan je TEST SQL ACCESS s provjerom potrebnih server-state prava.
+- Dodane su SQL Server skripte za provjeru, dodjelu i uklanjanje monitoring prava.
+- Razdvojeni su Windows user, Apross application user i SQL monitoring login.
+- SQL lozinka se ne sprema u report, CSV, settings.json ni source kod.
+
+ISPRAVLJENO
+- Ispravljen je PowerShell SQL connection-string problem DataSource.
+- Ispravljena je CS0019 build greška u SQL correlation servisu.
+- Uklonjene su dvostruko deklarirane SQL varijable.
+- Ispravljeno je pokretanje kada je privremena datoteka lokalnih portova prazna.
+- Uklonjena su nullable upozorenja u internet-provider lookup servisu.
+
+
 Verzija 1.1.0 - Multi-cloud izdanje
 Datum: 14.07.2026.
 
@@ -9,34 +44,22 @@ NOVO
 - Omogućena usporedna dijagnostika prema Alwyzon i Hetzner cloud targetima.
 - DataBox target pripremljen je u konfiguraciji i aktivirat će se nakon podizanja virtualnog servera.
 - Kontinuirani ping prema svim odabranim targetima izvodi se paralelno.
-- iPerf3 upload i download testovi izvode se strogo sekvencijalno kako se međusobno ne bi zagušivali.
+- iPerf3 upload i download testovi izvode se strogo sekvencijalno.
 - Extended i Burn-In profili rotiraju periodična iPerf mjerenja između odabranih targeta.
 - Dodani su zasebni DNS i traceroute rezultati za svaki cloud target.
 - Dodana je analiza Best measured network path.
-- Results u aplikaciji prikazuje sve odabrane targete u jednoj usporednoj tablici.
+- Results u aplikaciji prikazuje sve targete u jednoj usporednoj tablici.
 - HTML report sadrži objedinjene side-by-side tablice za ping, Internet Quality, iPerf3, DNS i traceroute.
-- Detaljni grafovi po targetu ostaju dostupni i otvaraju se klikom.
-- Dodan je prikaz internet providera/organizacije klijenta, javne IP adrese, ASN-a i približne lokacije.
-- Dodana je procjena trajanja usporednog testa.
-- Dodani su deployment i verification alati za Linux dijagnostičke nodeove.
-
-POBOLJŠANO I ISPRAVLJENO
-- Dodani su warm-up pingovi prije početka mjerenja; warm-up ne ulazi u packet loss, availability, grafove ni incidente.
-- Stvarni timeout nakon početka mjerenja i dalje se potpuno bilježi.
-- Status i postotak testa sada su prikazani unutar progress bara i vidljivi su na manjim ekranima.
+- Dodan je prikaz internet providera/organizacije, public IP-a, ASN-a i približne lokacije.
+- Dodani su warm-up pingovi koji ne ulaze u izmjerenu statistiku.
+- Status i postotak testa premješteni su unutar progress bara.
 - Ispravljen je odrezani tekst Compare cloud targets.
 - Quick profil jasno navodi da traceroute nije uključen.
-- Poboljšan je prikaz usporednih rezultata i navigacija kroz HTML report.
-- SQL test ostao je zaseban i opcionalan; ne prijavljuje se u bazu i provjerava samo DNS i TCP dostupnost.
 
 INFRASTRUKTURA
-- Alwyzon: centralni API/dashboard i primarni dijagnostički node - diag.zgdata.hr.
-- Hetzner Falkenstein: dodatni dijagnostički node - diag-hetzner.zgdata.hr, TCP 5201.
-- Sačuvan je postojeći SVN servis na Hetzner serveru, TCP 3690.
+- Alwyzon: diag.zgdata.hr.
+- Hetzner Falkenstein: diag-hetzner.zgdata.hr, TCP 5201.
 - DataBox: pripremljen za naknadnu aktivaciju - diag-databox.zgdata.hr.
-
-NAPOMENA
-Usporedba predstavlja izmjerene mrežne putove tijekom konkretnog testa. Ne predstavlja ukupnu ocjenu ili rangiranje cloud providera. Za odluku o migraciji treba dodatno uzeti u obzir cijenu, SLA, podršku, sigurnost, backup, računalne resurse i ponovljena mjerenja u različito vrijeme.
 
 
 Verzija 1.0.0 - Početno izdanje
@@ -44,10 +67,9 @@ Datum: 13.07.2026.
 
 - Početna distribucijska verzija Windows WPF aplikacije na .NET 8.
 - Dodani profili Quick, Standard, Extended i Burn-In.
-- Dodani Internet Quality, kontinuirani ping, opcionalni SQL TCP monitoring, iPerf3 upload/download, DNS i traceroute.
-- Extended i Burn-In omogućuju periodična iPerf mjerenja kroz vrijeme.
+- Dodani Internet Quality, kontinuirani ping, opcionalni SQL TCP monitoring, iPerf3, DNS i traceroute.
 - Dodan STOP s izradom djelomičnog HTML reporta.
 - Dodane informacije o računalu, mrežnim adapterima, incident timeline i inline SVG grafikoni.
-- Izrađen self-contained Windows x64 paket bez potrebe za zasebnom instalacijom .NET runtimea.
+- Izrađen self-contained Windows x64 paket.
 
 Podrška: toolkit@zgdata.hr
