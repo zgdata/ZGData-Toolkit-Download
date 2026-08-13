@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="hr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Preuzimanje aplikacije ZgData Toolkit za dijagnostiku internetske veze, mreže, cloud ruta i ključnih servisa.">
+  <meta name="theme-color" content="#f5fbff">
+  <title>ZgData Toolkit | Preuzimanje</title>
+  <style>
+    :root {
+      --navy:#0b1b38;
+      --text:#12233f;
+      --muted:#65758d;
+      --line:#dbe6ef;
+      --blue:#178ee6;
+      --green:#20bd54;
+      --card:#ffffff;
+      --shadow:0 24px 70px rgba(22,54,92,.16);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      color:var(--text);
+      font-family:Inter,Segoe UI,Arial,sans-serif;
+      background:
+        radial-gradient(circle at 8% 12%,rgba(39,164,255,.15),transparent 31%),
+        radial-gradient(circle at 90% 15%,rgba(32,189,84,.11),transparent 28%),
+        #f6fbff;
+      min-height:100vh;
+    }
+    body::before{
+      content:"";
+      display:block;
+      height:4px;
+      background:linear-gradient(90deg,#ffd318 0 22%,#ff7d18 22% 45%,#1ca8eb 45% 77%,#24ba55 77% 100%);
+    }
+    .page{width:min(1260px,calc(100% - 34px));margin:0 auto;padding:28px 0 34px}
+    .brand{display:flex;justify-content:center;margin:0 0 18px}
+    .brand img{width:min(330px,70vw);height:auto;display:block}
+    .hero{
+      display:grid;
+      grid-template-columns:minmax(0,1.15fr) minmax(360px,.85fr);
+      background:var(--card);
+      border:1px solid rgba(15,50,90,.08);
+      border-radius:26px;
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+    .preview{padding:30px;border-right:1px solid var(--line);background:linear-gradient(180deg,#fff,#f8fbfd)}
+    .preview-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:14px;font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:#63748e;font-weight:800}
+    .preview-button{border:0;background:none;padding:0;color:#72839a;font:inherit;cursor:pointer;text-transform:none;letter-spacing:0}
+    .preview-button:hover{color:var(--blue)}
+    .screenshot-frame{display:block;border:0;padding:0;background:#0d1b35;border-radius:18px;overflow:hidden;box-shadow:0 18px 44px rgba(12,31,60,.24);cursor:zoom-in;width:100%}
+    .screenshot-frame img{display:block;width:100%;height:auto}
+    .details{padding:38px 42px 30px;display:flex;flex-direction:column}
+    .title-row{display:flex;align-items:center;gap:18px;margin-bottom:10px}
+    .app-icon{width:82px;height:82px;border-radius:20px;object-fit:cover;box-shadow:0 10px 28px rgba(15,50,90,.16)}
+    .badge{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border:1px solid #a9d8f5;background:#eef8ff;color:#0878bd;border-radius:999px;font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:.04em}
+    .badge::before{content:"";width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px rgba(34,197,94,.13)}
+    h1{font-size:48px;line-height:.96;margin:19px 0 13px;letter-spacing:-.045em;color:#071a38}
+    .lead{font-size:18px;line-height:1.55;color:var(--muted);margin:0 0 21px}
+    .pills{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:20px}
+    .pill{border:1px solid #cddae6;background:#f8fbfd;border-radius:9px;padding:8px 11px;font-size:13px;font-weight:700;color:#445873}
+    .actions{display:grid;grid-template-columns:1.1fr 1fr;gap:10px;margin:0 0 13px}
+    .button{display:flex;align-items:center;justify-content:center;min-height:48px;padding:11px 15px;border-radius:11px;text-decoration:none;font-weight:800;font-size:14px;border:1px solid #cbd8e4;color:#13233f;background:#f9fbfd;transition:.15s ease}
+    .button:hover{transform:translateY(-1px);box-shadow:0 8px 20px rgba(31,72,115,.11)}
+    .button.primary{background:linear-gradient(135deg,#149ee9,#087ecf);color:white;border-color:transparent}
+    .button.support{background:linear-gradient(135deg,#22c55e,#16a34a);color:white;border-color:transparent}
+    .file-note{font-size:12px;color:#8795a8;margin:0 0 18px}
+    .version-box{display:flex;justify-content:space-between;align-items:center;border:1px solid #cddae6;background:#f8fbfd;border-radius:12px;padding:14px 16px;font-size:14px;font-weight:700;margin-top:auto}
+    .version-box strong{color:#18ae4b;font-size:18px}
+    .support-mail{margin:14px 0 0;font-size:13px;color:#67778d}
+    .support-mail a{color:#087dcc;font-weight:800;text-decoration:none}
+    .steps{border-top:1px solid var(--line);margin-top:16px;padding-top:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+    .step{background:#f7fafc;border-radius:12px;padding:14px;font-size:12px;color:#65758b;line-height:1.45}
+    .step strong{display:block;color:#13233f;margin-bottom:5px;font-size:13px}
+    footer{text-align:center;color:#75849a;font-size:12px;padding:18px 0 0}
+    dialog{width:min(1500px,95vw);max-height:94vh;border:0;border-radius:18px;padding:10px;background:#071226;box-shadow:0 30px 100px rgba(0,0,0,.48)}
+    dialog::backdrop{background:rgba(2,9,22,.78)}
+    dialog img{display:block;max-width:100%;max-height:88vh;margin:auto;border-radius:10px}
+    .close{position:absolute;right:16px;top:14px;width:38px;height:38px;border:0;border-radius:50%;background:rgba(255,255,255,.92);font-size:24px;cursor:pointer;color:#16243a}
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .preview{border-right:0;border-bottom:1px solid var(--line);padding:20px}
+      .details{padding:28px 24px}
+      h1{font-size:42px}
+    }
+    @media(max-width:560px){
+      .page{width:min(100% - 18px,1260px);padding-top:18px}
+      .brand{margin-bottom:12px}
+      .preview{padding:13px}
+      .preview-head{font-size:10px}
+      .details{padding:23px 18px}
+      .title-row{align-items:flex-start}
+      .app-icon{width:64px;height:64px;border-radius:16px}
+      h1{font-size:36px}
+      .lead{font-size:16px}
+      .actions{grid-template-columns:1fr}
+      .steps{grid-template-columns:1fr}
+      .version-box{gap:12px}
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="brand">
+      <img src="assets/ZgDataToolkit-logo.png?v=1.3.0-1" alt="Zagreb Data - Vaš IT partner">
+    </div>
+
+    <section class="hero" aria-labelledby="page-title">
+      <div class="preview">
+        <div class="preview-head">
+          <span>Pregled aplikacije</span>
+          <button class="preview-button" type="button" id="openPreview">Klikni za uvećanje</button>
+        </div>
+        <button class="screenshot-frame" type="button" id="openPreviewImage" aria-label="Uvećaj pregled aplikacije">
+          <img src="assets/ZgDataToolkit-screenshot-v1.3.0.png?v=1.3.0-1" alt="ZgData Toolkit 1.3.0 - multi-cloud, Apross i Printer Diagnostics">
+        </button>
+      </div>
+
+      <div class="details">
+        <div class="title-row">
+          <img class="app-icon" src="assets/ZgDataToolkit-icon.png?v=1.3.0-1" alt="ZgData Toolkit ikona">
+          <div>
+            <span class="badge">Službena verzija</span>
+            <h1 id="page-title">ZgData<br>Toolkit</h1>
+          </div>
+        </div>
+
+        <p class="lead">Alat za dijagnostiku internetske veze, cloud ruta, ključnih servisa, Apross klijenta i Windows print sustava.</p>
+
+        <div class="pills">
+          <span class="pill">Trenutna verzija: 1.3.0</span>
+          <span class="pill">Windows 10 / 11</span>
+          <span class="pill">64-bit</span>
+          <span class="pill">Single target + Multi-cloud</span>
+          <span class="pill">Apross Client Monitor</span>
+          <span class="pill">Printer Diagnostics &amp; Repair</span>
+        </div>
+
+        <div class="actions">
+          <a class="button primary" href="https://github.com/zgdata/ZGData-Toolkit-Download/raw/refs/heads/main/ZgDataToolkit-1.3.0-win-x64.zip">↓&nbsp; Preuzmi ZgData Toolkit</a>
+          <a class="button" href="documentation.pdf?v=1.3.0-1" target="_blank" rel="noopener">Dokumentacija</a>
+          <a class="button" href="release-notes.txt?v=1.3.0-1" target="_blank" rel="noopener">Novosti i povijest verzija</a>
+          <a class="button support" href="mailto:toolkit@zgdata.hr">Kontaktiraj podršku</a>
+        </div>
+
+        <p class="file-note">Datoteka za preuzimanje: ZgDataToolkit-1.3.0-win-x64.zip</p>
+
+        <div class="version-box">
+          <span>Zadnja objavljena verzija</span>
+          <strong>1.3.0</strong>
+        </div>
+
+        <p class="support-mail">Podrška: <a href="mailto:toolkit@zgdata.hr">toolkit@zgdata.hr</a></p>
+
+        <div class="steps">
+          <div class="step"><strong>1. Preuzmite</strong>Kliknite gumb i spremite ZIP paket na računalo.</div>
+          <div class="step"><strong>2. Raspakirajte</strong>Desni klik na ZIP i odaberite „Extract All”.</div>
+          <div class="step"><strong>3. Pokrenite</strong>Otvorite raspakiranu mapu i pokrenite ZgDataToolkit.exe.</div>
+        </div>
+      </div>
+    </section>
+
+    <footer>© 2026 Zagreb Data d.o.o. · Vaš IT partner</footer>
+  </main>
+
+  <dialog id="previewDialog">
+    <button class="close" type="button" aria-label="Zatvori">×</button>
+    <img src="assets/ZgDataToolkit-screenshot-v1.3.0.png?v=1.3.0-1" alt="Uvećani pregled ZgData Toolkit aplikacije">
+  </dialog>
+
+  <script>
+    const dialog = document.getElementById('previewDialog');
+    const openDialog = () => dialog.showModal();
+    document.getElementById('openPreview').addEventListener('click', openDialog);
+    document.getElementById('openPreviewImage').addEventListener('click', openDialog);
+    dialog.querySelector('.close').addEventListener('click', () => dialog.close());
+    dialog.addEventListener('click', (event) => {
+      const box = dialog.getBoundingClientRect();
+      const outside = event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom;
+      if (outside) dialog.close();
+    });
+  </script>
+</body>
+</html>

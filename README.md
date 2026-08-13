@@ -4,29 +4,26 @@ Službeni repozitorij za distribuciju aplikacije **ZgData Toolkit** i objavu str
 
 ## Trenutna verzija
 
-**1.2.0 - Apross Client Monitor i SQL korelacija**  
-Objavljeno: 15.07.2026.
+**1.3.0 - Printer Diagnostics & Repair**  
+Objavljeno: 13.08.2026.
 
 ### Preuzimanje
-- `ZgDataToolkit-1.2.0-win-x64.zip` - verzionirani produkcijski paket
-- `ZgDataToolkit-latest-win-x64.zip` - kopija zadnje objavljene verzije
-- `ZGDataToolkit-x64.zip` - kompatibilni naziv zadnje verzije
+- `ZgDataToolkit-1.3.0-win-x64.zip` - verzionirani produkcijski paket
 - `documentation.pdf` - aktualne upute za korištenje i čitanje rezultata
 - `release-notes.txt` - novosti i potpuna povijest verzija
 
-## Najvažnije mogućnosti verzije 1.2.0
-- sve multi-cloud mogućnosti iz verzije 1.1.0
-- Apross Client Monitor za lokalno pokrenuti `Apross.exe`
-- odabir procesa prema PID-u, Windows korisniku i naslovu prozora
-- praćenje child procesa, WebView2 i pomoćnih report/browser procesa
-- CPU, RAM, private memory, handles, GDI, USER i `Not responding`
-- SQL, Web/API, file-share i ostale TCP veze po procesu
-- lokalni/LAN i javni/cloud backend endpointi
-- `PROBLEM HAPPENED` marker i objedinjena vremenska crta
-- HTML i CSV izvještaji Apross monitoringa
-- opcionalna SQL live correlation analiza
-- SPID, login, baza, command, elapsed, wait, blocking, CPU, reads i writes
-- SQL access test i SQL Server pomoćne skripte
+> Od verzije 1.3.0 statična web-stranica se objavljuje samo iz `site/` foldera. Veliki ZIP ostaje izvan Azure Static Web Apps deploy foldera i preuzima se iz GitHub repozitorija, čime se izbjegava Azure Free plan limit veličine statičke aplikacije.
+
+## Najvažnije mogućnosti verzije 1.3.0
+- sve mogućnosti verzije 1.2.0
+- Printer Diagnostics & Repair
+- pregled printer queueova, statusa, portova, IP/host podataka i drivera
+- mrežni printer probing i provjera print/service portova
+- unavailable/warning i stale/duplicate kandidati
+- safe Recommended fix za Windows default-printer management
+- HTML printer report i Action log
+- GDI/USER/handles process snapshot
+- GDI test print s 0/1 smileyjem
 
 DataBox target ostaje pripremljen i uključit će se nakon što virtualni server bude dostupan.
 

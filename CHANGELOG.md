@@ -1,5 +1,23 @@
 # ZgData Toolkit - Changelog
 
+## 1.3.0 - 2026-08-13
+
+### Printer Diagnostics & Repair
+- Added printer queue inventory with Windows state, port, endpoint and driver metadata.
+- Added network-printer availability and service-port probing.
+- Added unavailable/warning diagnostics with human-readable reasons.
+- Added stale/duplicate queue candidates for manual verification.
+- Added print-job inspection and manual job cancellation.
+- Added safe default-printer repair workflow.
+- Added HTML printer report and action log.
+- Added GDI/USER/handle process snapshot.
+- Added 0/1 smiley test page using the classic Windows GDI print pipeline.
+
+### Reliability and fixes
+- Fixed the PowerShell `$Host` reserved-variable collision in printer discovery.
+- Improved dark-theme contrast in printer tables and controls.
+- Replaced the incompatible XPS test-print path with a GDI print path after validation against a working Windows test page.
+
 ## 1.2.0 - 2026-07-15
 
 ### Apross Client Monitor
