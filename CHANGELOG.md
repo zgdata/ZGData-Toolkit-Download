@@ -1,3 +1,11 @@
+## 1.4.0 - 2026-08-14
+
+- SysAdmin Hub redesign
+- Apross Resource Guard and Resource Limits
+- Printer Diagnostics Phase 2
+- System Health
+- Apross Regional Settings readiness/apply
+
 # ZgData Toolkit - Changelog
 
 ## 1.3.0 - 2026-08-13
