@@ -1,5 +1,72 @@
-﻿ZgData Toolkit - Novosti i povijest verzija
-================================================
+ZgData Toolkit - Novosti i povijest verzija
+==================================================
+
+Verzija 1.4.0 - SysAdmin Hub, Resource Guard, System Health i Regional Settings
+Datum: 14.08.2026.
+
+NOVO - SYSADMIN HUB
+- Glavni prozor Toolkita proširen je centralnim SysAdmin Hubom.
+- Aktivni moduli dostupni su odmah s vrha aplikacije.
+- Network & Cloud Diagnostics ostaje glavni mrežni i cloud dijagnostički workflow.
+- Glavni prozor se otvara maksimiziran.
+
+NOVO - APROSS RESOURCE GUARD
+- Resource Guard je integriran u Apross Client Monitor.
+- Prati GDI, USER, handles i Private RAM kroz vrijeme.
+- Prikazuje baseline, current, peak, delta, quota i postotak iskorištenja.
+- Dodana je trend analiza i statusi OK / Observe / Warning / Critical.
+- Prvih 60 sekundi služi za baseline; leak procjena koristi dulje vremensko razdoblje.
+- Dodan je graf GDI/USER kretanja kroz vrijeme.
+- PROBLEM HAPPENED marker ostaje vidljiv u timelineu i HTML reportu.
+- Resource Guard podaci uključeni su u Apross HTML report.
+- Private RAM je usklađen između live prikaza i HTML izvještaja.
+
+NOVO - GDI / USER RESOURCE LIMITS
+- Prikaz trenutačnih Windows GDI i USER quota vrijednosti.
+- Prikaz stvarne GDI/USER potrošnje Apross procesa.
+- ZgData Recommended: GDI 20000 / USER 10000.
+- RESTORE WINDOWS DEFAULTS vraća 10000 / 10000.
+- Toolkit ostaje unelevated; UAC se pokreće samo za helper koji mijenja HKLM.
+- USER quota se ne podiže iznad 10000 bez mjerenja koja to opravdavaju.
+
+DORAĐENO - PRINTER DIAGNOSTICS & REPAIR
+- Printer Diagnostics ostaje zaseban aktivni modul u SysAdmin Hubu.
+- Inventar printera, dostupnost, driveri, portovi i queue podaci.
+- Safe Repair za problematičan/default printer workflow.
+- Klasični Windows GDI TEST PRINT.
+- Veliki IT smiley sastavljen od 0/1 elemenata za test GDI ispisa.
+
+NOVO - SYSTEM HEALTH
+- CPU load i model procesora.
+- Fizički RAM: ukupno, iskorišteno i dostupno.
+- Uptime i vrijeme zadnjeg boota.
+- Windows edition, verzija, build i arhitektura.
+- Slobodan prostor sistemskog diska.
+- Pending reboot detekcija.
+- WHEA događaji.
+- Disk / NTFS / storage događaji.
+- Kernel-Power / BugCheck događaji.
+- Application Error / Application Hang događaji.
+- Overall health status i pojedinačni health checks.
+- Izrada System Health HTML reporta.
+
+NOVO - APROSS REGIONAL SETTINGS
+- Provjera regionalnih preduvjeta važnih za Apross.
+- Culture: hr-HR.
+- Region: Croatia.
+- Short date: dd.MM.yy.
+- Long date: dd.MMMM.yyyy.
+- Short time: HH:mm.
+- Long time: HH:mm:ss.
+- System locale: Croatian (Croatia) / hr-HR.
+- APPLY APROSS SETTINGS prvo postavlja culture/region, a zatim custom date/time formate.
+- System locale promjena koristi UAC samo kada je potrebna.
+
+DISTRIBUCIJA
+- Self-contained Windows win-x64 paket.
+- Datoteka: ZgDataToolkit-1.4.0-win-x64.zip.
+
+--------------------------------------------------
 
 Verzija 1.3.0 - Printer Diagnostics & Repair
 Datum: 13.08.2026.

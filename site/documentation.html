@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="hr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ZgData Toolkit 1.4.0 - Dokumentacija</title>
+<style>
+:root{--bg:#eef6fb;--card:#fff;--ink:#10233c;--muted:#66788f;--blue:#159fe0;--green:#20b955;--line:#dbe7f0}
+*{box-sizing:border-box}
+body{margin:0;font-family:Segoe UI,Arial,sans-serif;background:linear-gradient(135deg,#eef7ff 0%,#f8fbfd 45%,#eefaf2 100%);color:var(--ink)}
+.topline{height:4px;background:linear-gradient(90deg,#facc15,#fb923c,#38bdf8,#22c55e)}
+.wrap{max-width:1180px;margin:0 auto;padding:34px 22px 70px}
+.hero{background:rgba(255,255,255,.95);border:1px solid #e5edf4;border-radius:26px;box-shadow:0 18px 50px rgba(15,23,42,.09);padding:30px}
+.hero h1{font-size:38px;margin:0 0 8px;color:#0d2340}.hero p{margin:0;color:var(--muted);font-size:17px;line-height:1.55}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.badge{border:1px solid #cfe0ec;background:#f7fbfe;border-radius:10px;padding:7px 10px;font-size:13px;font-weight:700}.badge.green{color:#109240;border-color:#b8eac9;background:#f2fcf5}
+.grid{display:grid;grid-template-columns:280px 1fr;gap:22px;margin-top:22px}
+nav,.card{background:#fff;border:1px solid #e2ebf2;border-radius:18px;box-shadow:0 9px 26px rgba(15,23,42,.05)}
+nav{padding:18px;position:sticky;top:18px;height:max-content}nav h3{margin:0 0 12px}nav a{display:block;color:#24415f;text-decoration:none;padding:9px 10px;border-radius:8px;font-size:14px}nav a:hover{background:#eff7fc;color:#078bd0}
+.content{display:grid;gap:18px}.card{padding:24px}.card h2{margin:0 0 14px;color:#0e2b49;font-size:25px}.card h3{margin:22px 0 8px;color:#163b60}.card p,.card li{line-height:1.6}.card ul{padding-left:21px}
+.note{border-left:4px solid #159fe0;background:#f1f9fe;padding:13px 15px;border-radius:8px;margin:14px 0}.ok{border-left-color:#20b955;background:#f1fbf4}.warn{border-left-color:#f59e0b;background:#fff8e8}
+.shot{width:100%;border-radius:14px;border:1px solid #d9e5ee;box-shadow:0 8px 24px rgba(15,23,42,.08);margin-top:14px}
+.table{width:100%;border-collapse:collapse;margin-top:10px}.table th,.table td{padding:10px 9px;border-bottom:1px solid #e4edf4;text-align:left;vertical-align:top}.table th{background:#f6fafc;color:#294963}
+.footer{color:#74869b;text-align:center;margin-top:28px;font-size:13px}
+@media(max-width:850px){.grid{grid-template-columns:1fr}nav{position:static}.hero h1{font-size:31px}}
+</style>
+</head>
+<body>
+<div class="topline"></div>
+<div class="wrap">
+<section class="hero">
+<h1>ZgData Toolkit 1.4.0</h1>
+<p>Centralni dijagnostički alat za Zagreb Data cloud servise, Apross klijente, Windows print sustav i osnovnu sistemsku dijagnostiku.</p>
+<div class="badges">
+<span class="badge green">Službena verzija 1.4.0</span><span class="badge">Windows 10 / 11</span><span class="badge">64-bit</span><span class="badge">Self-contained win-x64</span><span class="badge">SysAdmin Hub</span>
+</div>
+</section>
+
+<div class="grid">
+<nav>
+<h3>Sadržaj</h3>
+<a href="#overview">Pregled</a>
+<a href="#network">Network &amp; Cloud</a>
+<a href="#apross">Apross Client Monitor</a>
+<a href="#guard">Resource Guard</a>
+<a href="#limits">GDI / USER Limits</a>
+<a href="#printers">Printer Diagnostics</a>
+<a href="#health">System Health</a>
+<a href="#regional">Apross Regional Settings</a>
+<a href="#reports">Izvještaji</a>
+<a href="#install">Instalacija</a>
+<a href="#history">Što je novo u 1.4.0</a>
+</nav>
+
+<main class="content">
+<section class="card" id="overview">
+<h2>Pregled aplikacije</h2>
+<p>Verzija 1.4.0 uvodi centralni <b>SysAdmin Hub</b> iz kojeg su aktivni moduli dostupni na jednom mjestu. Postojeći Network &amp; Cloud Diagnostics ostaje osnovni workflow, a dodatni moduli služe za Apross, printere, Windows resurse i System Health.</p>
+<img class="shot" src="assets/zgdata-toolkit-1.4.0-main.png" alt="ZgData Toolkit 1.4.0 - SysAdmin Hub">
+</section>
+
+<section class="card" id="network">
+<h2>Network &amp; Cloud Diagnostics</h2>
+<ul>
+<li>Provjera lokalnog računala i aktivnog mrežnog adaptera.</li>
+<li>Internet quality, ping monitoring, packet loss i jitter.</li>
+<li>SQL TCP monitoring prema Zagreb Data endpointu.</li>
+<li>iPerf upload i download mjerenja.</li>
+<li>DNS resolution i traceroute prema odabranom profilu.</li>
+<li>Single target i Compare cloud targets način rada.</li>
+<li>HTML report nakon završenog testa.</li>
+</ul>
+</section>
+
+<section class="card" id="apross">
+<h2>Apross Client Monitor</h2>
+<p>Namijenjen dijagnostici lokalno pokrenutog Aprossa i procesa koje Apross pokreće ili koristi.</p>
+<ul>
+<li>Glavni Apross proces, child procesi i pomoćni report/browser procesi.</li>
+<li>CPU, RAM, handles, GDI i USER objekti te Responding/Not responding stanje.</li>
+<li>TCP konekcije povezane s konkretnim procesom i PID-om.</li>
+<li>SQL, Web/API, file share i ostali endpointi.</li>
+<li>PROBLEM HAPPENED marker za označavanje trenutka problema.</li>
+<li>HTML/CSV izvještaj i timeline za naknadnu analizu.</li>
+</ul>
+</section>
+
+<section class="card" id="guard">
+<h2>Resource Guard</h2>
+<p>Resource Guard je dio Apross Client Monitora i služi za dugotrajnije praćenje resursa kada se sumnja na GDI/USER leak ili rast drugih procesa.</p>
+<table class="table">
+<tr><th>Metrička grupa</th><th>Što se prati</th></tr>
+<tr><td>GDI</td><td>Baseline, current, peak, delta, quota, postotak iskorištenja i trend.</td></tr>
+<tr><td>USER</td><td>Baseline, current, peak, delta, quota, postotak iskorištenja i trend.</td></tr>
+<tr><td>Handles</td><td>Trenutačni broj, peak i kretanje kroz vrijeme.</td></tr>
+<tr><td>Private RAM</td><td>Privatna memorija procesa, usklađena između live prikaza i HTML reporta.</td></tr>
+</table>
+<div class="note ok">Statusi: <b>OK / Observe / Warning / Critical</b>. Prvih 60 sekundi služi za baseline; trend i leak analiza postaju pouzdaniji na duljim sesijama.</div>
+</section>
+
+<section class="card" id="limits">
+<h2>GDI / USER Resource Limits</h2>
+<p>Prikazuje trenutačne sistemske kvote i realnu potrošnju Apross procesa.</p>
+<div class="note"><b>ZgData Recommended:</b> GDI 20000 / USER 10000.</div>
+<ul>
+<li><b>SET ZGDATA RECOMMENDED</b> postavlja preporučene vrijednosti.</li>
+<li><b>RESTORE WINDOWS DEFAULTS</b> vraća 10000 / 10000.</li>
+<li>Toolkit ostaje pokrenut bez administratorskih prava; samo helper za HKLM promjenu traži UAC.</li>
+<li>USER quota se ne podiže iznad 10000 bez konkretnih mjerenja koja to opravdavaju.</li>
+</ul>
+</section>
+
+<section class="card" id="printers">
+<h2>Printer Diagnostics &amp; Repair</h2>
+<ul>
+<li>Inventar instaliranih printera, Windows status, port, Host/IP, driver i broj print jobova.</li>
+<li>Provjera dostupnosti mrežnog printera i print/service portova gdje je moguće.</li>
+<li>Prepoznavanje unavailable/warning printera i pregled razloga dijagnoze.</li>
+<li>Ručno osvježavanje queue kandidata i otkazivanje problematičnog print joba.</li>
+<li>Safe Repair može isključiti “Let Windows manage my default printer”.</li>
+<li>Microsoft Print to PDF može se postaviti kao siguran default kada je postojeći default nedostupan.</li>
+<li>TEST PRINT koristi klasični Windows GDI pipeline i veliki IT smiley sastavljen od 0/1 elemenata.</li>
+</ul>
+</section>
+
+<section class="card" id="health">
+<h2>System Health</h2>
+<p>Read-only pregled osnovnog stanja Windows računala. Normalni snapshot ne zahtijeva administratorska prava.</p>
+<ul>
+<li>CPU load i model procesora.</li>
+<li>Fizički RAM: ukupno, iskorišteno i dostupno.</li>
+<li>Uptime i vrijeme zadnjeg boota.</li>
+<li>Windows edition, verzija, build i arhitektura.</li>
+<li>Slobodan prostor sistemskog diska.</li>
+<li>Pending reboot detekcija.</li>
+<li>WHEA, disk/NTFS/storage, Kernel-Power/BugCheck i application crash/hang događaji zadnja 24 sata.</li>
+<li>Overall status te pojedinačni Health checks.</li>
+<li>HTML System Health report.</li>
+</ul>
+<img class="shot" src="assets/zgdata-toolkit-1.4.0-system-health.png" alt="ZgData Toolkit 1.4.0 - System Health">
+</section>
+
+<section class="card" id="regional">
+<h2>Apross Regional Settings</h2>
+<p>System Health provjerava regionalne preduvjete koji su važni kod pripreme Windows računala za Apross.</p>
+<table class="table">
+<tr><th>Postavka</th><th>Vrijednost za Apross</th></tr>
+<tr><td>Culture</td><td><b>hr-HR</b></td></tr>
+<tr><td>Region</td><td><b>Croatia</b></td></tr>
+<tr><td>Short date</td><td><b>dd.MM.yy</b></td></tr>
+<tr><td>Long date</td><td><b>dd.MMMM.yyyy</b></td></tr>
+<tr><td>Short time</td><td><b>HH:mm</b></td></tr>
+<tr><td>Long time</td><td><b>HH:mm:ss</b></td></tr>
+<tr><td>System locale</td><td><b>Croatian (Croatia) / hr-HR</b></td></tr>
+</table>
+<div class="note warn">Kod APPLY APROSS SETTINGS prvo se postavlja hr-HR i Croatia, a tek nakon toga custom date/time formati. Time Windows više ne vraća hrvatske default formate poput d.M.yyyy. i H:mm.</div>
+</section>
+
+<section class="card" id="reports">
+<h2>Izvještaji</h2>
+<ul>
+<li>Network &amp; Cloud Diagnostics - HTML report.</li>
+<li>Apross Client Monitor - HTML/CSV izvještaji i timeline.</li>
+<li>Resource Guard - graf GDI/USER kretanja, quota i trend podaci u HTML reportu.</li>
+<li>Printer Diagnostics - HTML printer report i action log.</li>
+<li>System Health - HTML snapshot stanja računala.</li>
+</ul>
+</section>
+
+<section class="card" id="install">
+<h2>Instalacija i pokretanje</h2>
+<ol>
+<li>Preuzmite <b>ZgDataToolkit-1.4.0-win-x64.zip</b>.</li>
+<li>Raspakirajte ZIP u lokalni folder.</li>
+<li>Pokrenite <b>ZgDataToolkit.exe</b>.</li>
+</ol>
+<div class="note ok">Distribucija je self-contained win-x64, pa korisnik ne mora zasebno instalirati .NET runtime.</div>
+</section>
+
+<section class="card" id="history">
+<h2>Što je novo u 1.4.0</h2>
+<ul>
+<li>Novi centralni SysAdmin Hub.</li>
+<li>Apross Resource Guard s baseline/current/peak/delta/quota/trend analizom.</li>
+<li>GDI / USER Resource Limits alat s preporučenim Zagreb Data vrijednostima.</li>
+<li>Printer Diagnostics Phase 2 i klasični GDI test print.</li>
+<li>System Health modul.</li>
+<li>Apross Regional Settings readiness i APPLY workflow.</li>
+<li>Main window se otvara maksimiziran, uz čišću navigaciju i aktivne module u Hubu.</li>
+</ul>
+</section>
+</main>
+</div>
+<div class="footer">© 2026 Zagreb Data d.o.o. · ZgData Toolkit 1.4.0</div>
+</div>
+</body>
+</html>
