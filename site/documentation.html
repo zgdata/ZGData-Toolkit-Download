@@ -39,6 +39,7 @@ nav{padding:18px;position:sticky;top:18px;height:max-content}nav h3{margin:0 0 1
 <span class="badge">Storage / SMART</span>
 <span class="badge">Windows Repair</span>
 <span class="badge">Performance / Full Gas</span>
+<span class="badge">Startup / Services</span>
 </div>
 </section>
 
@@ -56,6 +57,7 @@ nav{padding:18px;position:sticky;top:18px;height:max-content}nav h3{margin:0 0 1
 <a href="#storage">Storage / SMART</a>
 <a href="#repair">Windows Repair &amp; Health</a>
 <a href="#performance">Performance / Full Gas</a>
+<a href="#startup-services">Startup / Services</a>
 <a href="#reports">Izvještaji</a>
 <a href="#install">Instalacija</a>
 <a href="#new">Novo u aktualnom 1.4.0 buildu</a>
@@ -71,6 +73,7 @@ nav{padding:18px;position:sticky;top:18px;height:max-content}nav h3{margin:0 0 1
 <div class="module"><b>Storage / SMART</b>Diskovi, volumeni, eventovi, live I/O, session analysis, incident markers i sigurne akcije.</div>
 <div class="module"><b>Windows Repair &amp; Health</b>DISM, SFC, Windows Update dijagnostika, live output, progress i Smart Repair.</div>
 <div class="module"><b>Performance / Full Gas</b>CPU, RAM, commit, paging, processor queue, process I/O, incidenti i performance verdict.</div>
+<div class="module"><b>Startup / Services</b>Startup inventar, Windows servisi, scheduled tasks, boot telemetry, alerti i kontrolirane akcije.</div>
 <div class="module"><b>System Health</b>Windows build, uptime, disk, pending reboot, WHEA/storage/crash događaji i regionalni preduvjeti.</div>
 </div>
 </section>
@@ -160,6 +163,19 @@ nav{padding:18px;position:sticky;top:18px;height:max-content}nav h3{margin:0 0 1
 </ul>
 </section>
 
+
+<section class="card" id="startup-services"><h2>Startup / Services Diagnostics</h2>
+<p>Modul za dijagnostiku startup stavki, Windows servisa, Scheduled Taskova i boot utjecaja bez naslijepog gasenja servisa.</p>
+<ul>
+<li><b>Startup Items:</b> scope, tip, naziv, command/target, lokacija i status.</li>
+<li><b>Services:</b> stanje, startup tip, account, path, PID i klasifikacija Microsoft-ish / Third-party.</li>
+<li><b>Scheduled Tasks:</b> last run, last result, next run, autor i klasa. Alerti se mogu otvoriti direktno klikom na karticu.</li>
+<li><b>Task result decoder:</b> numericki rezultat pretvara u razumljiv opis i preporucenu akciju.</li>
+<li><b>Boot telemetry:</b> Diagnostics-Performance podaci citaju se preko kontroliranog UAC-a kada standardni korisnik nema pristup logu.</li>
+<li><b>Boot impact:</b> prikazuje stvarni boot duration kada je telemetry dostupan; inace ostaje jasno oznacen kao nedostupan.</li>
+<li><b>Controlled changes:</b> pojedina startup stavka moze se privremeno disableati za test i kasnije vratiti. Preporucen je startup snapshot prije promjene.</li>
+<li><b>HTML report:</b> ukljucuje startup, services, tasks, boot telemetry, findings, alert status i collector status.</li>
+</ul></section>
 <section class="card" id="reports"><h2>Izvještaji</h2>
 <ul>
 <li>Network &amp; Cloud HTML report.</li><li>Apross HTML/CSV + timeline.</li><li>Resource Guard trend/graf podaci.</li><li>Printer report + action log.</li><li>System Health HTML report.</li><li>Storage / SMART HTML report sa session analysisom, diskovima, volumenima, procesima, timelineom i storage eventima.</li><li>Windows Repair HTML report i servisni logovi.</li><li>Performance HTML report sa session verdictom i incident correlationom.</li></ul></section>
@@ -173,7 +189,8 @@ nav{padding:18px;position:sticky;top:18px;height:max-content}nav h3{margin:0 0 1
 <li><b>Storage / SMART Diagnostics</b> - kompletna disk/storage dijagnostika, background monitoring, process I/O correlation, incident marker, P95/sustained-pressure analiza, findings/actions i HTML report.</li>
 <li><b>Windows Repair &amp; Health</b> - DISM/SFC deep health check, pravi live output i progress, komponentni i system-file status, Smart Repair samo kada je potreban, Windows Update/servicing pregled i kontrolirane UAC akcije.</li>
 <li><b>Performance / Full Gas</b> - live CPU/RAM/commit/paging/queue/process telemetry, incident correlation, pressure classification, reported clock signal, offender analiza i HTML report.</li>
-<li>SysAdmin Hub sada prikazuje Storage / SMART, Windows Repair i Performance / Full Gas kao <b>ACTIVE</b>.</li>
+<li><b>Startup / Services Diagnostics</b> - startup inventar, servisna analiza, scheduled-task alerti s dekodiranjem result kodova, boot telemetry preko UAC-a i kontrolirane startup akcije.</li>
+<li>SysAdmin Hub sada prikazuje Storage / SMART, Windows Repair, Performance / Full Gas i Startup / Services kao <b>ACTIVE</b>.</li>
 <li>Dodatno su polirani kontrast, Event severity klasifikacija, reportovi, adaptive monitoring i false-positive pravila.</li>
 </ul>
 <p>Prethodne 1.4.0 funkcionalnosti ostaju uključene: SysAdmin Hub, Apross Resource Guard, GDI/USER Limits, Printer Diagnostics, System Health i Apross Regional Settings.</p>

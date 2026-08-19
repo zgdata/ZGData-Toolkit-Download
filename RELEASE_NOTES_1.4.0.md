@@ -2,7 +2,7 @@
 
 Release build: 19.08.2026.
 
-Expanded SysAdmin build with Storage / SMART Diagnostics, Windows Repair & Health and Performance / Full Gas, while preserving the existing Network & Cloud, Apross Resource Guard, Printer Diagnostics, System Health and Regional Settings modules.
+Expanded SysAdmin build with Storage / SMART Diagnostics, Windows Repair & Health, Performance / Full Gas and Startup / Services Diagnostics, while preserving Network & Cloud, Apross Resource Guard, Printer Diagnostics, System Health and Regional Settings modules.
 
 Production artifact: ZgDataToolkit-1.4.0-win-x64.zip
-SHA256: 8d9df3bd9e92be4d376e1070a7f95cdb1db88a8b5d5423bda79c434fc667e13a
+SHA256: 4ee3f7a8621a9212f6810103b09b9c3eed66a4202b97dace779ce88fb930435a

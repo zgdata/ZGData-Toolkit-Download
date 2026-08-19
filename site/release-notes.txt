@@ -38,10 +38,25 @@ NOVO - PERFORMANCE / FULL GAS
 - Dodan offender/correlation prikaz i prosireni HTML report.
 - Full Gas akcije ostaju kontrolirane i prate prethodni/aktivni power plan.
 
+
+NOVO - STARTUP / SERVICES DIAGNOSTICS
+- Dodan kompletan Startup / Services modul u SysAdmin Hub.
+- Inventar startup stavki prikazuje scope, tip, naziv, command/target i lokaciju.
+- Servisi se analiziraju s klasifikacijom Microsoft-ish / Third-party te statusom i startup tipom.
+- Upozorenja za automatske servise prikazuju se kao alerti, bez automatskog gasenja servisa.
+- Scheduled Tasks modul prikazuje zadnji rezultat, sljedeci run, autora i klasifikaciju.
+- Alert kartice su klikabilne i vode direktno na filtrirani popis problema.
+- Task Scheduler result kodovi se dekodiraju u razumljiv opis i preporucenu akciju.
+- Boot telemetry se cita kontrolirano preko UAC-a kada standardni korisnik nema pristup Diagnostics-Performance logu.
+- Prikazuje se procijenjeni last boot i stvarni boot impact kada je telemetry dostupan.
+- Action Center omogucuje controlled disable/restore pojedine startup stavke uz preporuku da se prije promjene napravi snapshot.
+- HTML report sadrzi startup, services, scheduled tasks, boot telemetry, findings i collector status.
+
 SYSADMIN HUB
 - STORAGE / SMART je ACTIVE.
 - WINDOWS REPAIR je ACTIVE.
 - PERFORMANCE / FULL GAS je ACTIVE.
+- STARTUP / SERVICES je ACTIVE.
 - Postojeci Network & Cloud, Apross Client Monitor, Printer Diagnostics, GDI/USER Limits i System Health ostaju aktivni.
 
 POSTOJECE 1.4.0 FUNKCIONALNOSTI
