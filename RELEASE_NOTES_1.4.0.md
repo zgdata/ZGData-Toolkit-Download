@@ -1,44 +1,8 @@
 # ZgData Toolkit 1.4.0
 
-## SysAdmin Hub
-- Centralni pristup aktivnim SysAdmin modulima.
+Release build: 19.08.2026.
 
-## Apross Client Monitor / Resource Guard
-- GDI / USER / handles / Private RAM monitoring.
-- Baseline, current, peak, delta, quota, utilization i trend.
-- Leak-suspect analiza i PROBLEM HAPPENED korelacija.
-- Resource Guard podaci u HTML izvještajima.
+Expanded SysAdmin build with Storage / SMART Diagnostics, Windows Repair & Health and Performance / Full Gas, while preserving the existing Network & Cloud, Apross Resource Guard, Printer Diagnostics, System Health and Regional Settings modules.
 
-## GDI / USER Limits
-- Trenutačne kvote i potrošnja.
-- ZgData Recommended: GDI 20000 / USER 10000.
-- UAC elevation samo za sistemske promjene.
-
-## Printer Diagnostics & Repair
-- Inventar i dostupnost printera.
-- Pomoć za default printer.
-- Klasični Windows GDI test print.
-
-## System Health
-- CPU, RAM, uptime, last boot i Windows build.
-- Slobodan prostor sistemskog diska.
-- Pending reboot.
-- WHEA, storage/NTFS, crash/power i application stability događaji.
-- HTML report.
-
-## Apross Regional Settings
-Potrebno:
-- Culture: hr-HR
-- Region: Croatia
-- Short date: dd.MM.yy
-- Long date: dd.MMMM.yyyy
-- Short time: HH:mm
-- Long time: HH:mm:ss
-- System locale: Croatian (Croatia)
-
-Hotfix:
-- Culture/Home Location postavljaju se prvo.
-- Apross date/time formati postavljaju se nakon toga kako ih Windows ne bi vratio na hrvatske default vrijednosti.
-
-## Distribution
-- Self-contained win-x64
+Production artifact: ZgDataToolkit-1.4.0-win-x64.zip
+SHA256: 8d9df3bd9e92be4d376e1070a7f95cdb1db88a8b5d5423bda79c434fc667e13a

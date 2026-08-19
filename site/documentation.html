@@ -5,23 +5,23 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>ZgData Toolkit 1.4.0 - Dokumentacija</title>
 <style>
-:root{--bg:#eef6fb;--card:#fff;--ink:#10233c;--muted:#66788f;--blue:#159fe0;--green:#20b955;--line:#dbe7f0}
+:root{--bg:#eef6fb;--card:#fff;--ink:#10233c;--muted:#66788f;--blue:#159fe0;--green:#20b955;--line:#dbe7f0;--orange:#f59e0b;--purple:#8b5cf6}
 *{box-sizing:border-box}
 body{margin:0;font-family:Segoe UI,Arial,sans-serif;background:linear-gradient(135deg,#eef7ff 0%,#f8fbfd 45%,#eefaf2 100%);color:var(--ink)}
 .topline{height:4px;background:linear-gradient(90deg,#facc15,#fb923c,#38bdf8,#22c55e)}
-.wrap{max-width:1180px;margin:0 auto;padding:34px 22px 70px}
-.hero{background:rgba(255,255,255,.95);border:1px solid #e5edf4;border-radius:26px;box-shadow:0 18px 50px rgba(15,23,42,.09);padding:30px}
+.wrap{max-width:1220px;margin:0 auto;padding:34px 22px 70px}
+.hero{background:rgba(255,255,255,.96);border:1px solid #e5edf4;border-radius:26px;box-shadow:0 18px 50px rgba(15,23,42,.09);padding:30px}
 .hero h1{font-size:38px;margin:0 0 8px;color:#0d2340}.hero p{margin:0;color:var(--muted);font-size:17px;line-height:1.55}
 .badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.badge{border:1px solid #cfe0ec;background:#f7fbfe;border-radius:10px;padding:7px 10px;font-size:13px;font-weight:700}.badge.green{color:#109240;border-color:#b8eac9;background:#f2fcf5}
-.grid{display:grid;grid-template-columns:280px 1fr;gap:22px;margin-top:22px}
+.grid{display:grid;grid-template-columns:290px 1fr;gap:22px;margin-top:22px}
 nav,.card{background:#fff;border:1px solid #e2ebf2;border-radius:18px;box-shadow:0 9px 26px rgba(15,23,42,.05)}
-nav{padding:18px;position:sticky;top:18px;height:max-content}nav h3{margin:0 0 12px}nav a{display:block;color:#24415f;text-decoration:none;padding:9px 10px;border-radius:8px;font-size:14px}nav a:hover{background:#eff7fc;color:#078bd0}
-.content{display:grid;gap:18px}.card{padding:24px}.card h2{margin:0 0 14px;color:#0e2b49;font-size:25px}.card h3{margin:22px 0 8px;color:#163b60}.card p,.card li{line-height:1.6}.card ul{padding-left:21px}
-.note{border-left:4px solid #159fe0;background:#f1f9fe;padding:13px 15px;border-radius:8px;margin:14px 0}.ok{border-left-color:#20b955;background:#f1fbf4}.warn{border-left-color:#f59e0b;background:#fff8e8}
-.shot{width:100%;border-radius:14px;border:1px solid #d9e5ee;box-shadow:0 8px 24px rgba(15,23,42,.08);margin-top:14px}
+nav{padding:18px;position:sticky;top:18px;height:max-content}nav h3{margin:0 0 12px}nav a{display:block;color:#24415f;text-decoration:none;padding:8px 10px;border-radius:8px;font-size:14px}nav a:hover{background:#eff7fc;color:#078bd0}
+.content{display:grid;gap:18px}.card{padding:24px}.card h2{margin:0 0 14px;color:#0e2b49;font-size:25px}.card h3{margin:22px 0 8px;color:#163b60}.card p,.card li{line-height:1.6}.card ul,.card ol{padding-left:21px}
+.note{border-left:4px solid var(--blue);background:#f1f9fe;padding:13px 15px;border-radius:8px;margin:14px 0}.ok{border-left-color:var(--green);background:#f1fbf4}.warn{border-left-color:var(--orange);background:#fff8e8}
 .table{width:100%;border-collapse:collapse;margin-top:10px}.table th,.table td{padding:10px 9px;border-bottom:1px solid #e4edf4;text-align:left;vertical-align:top}.table th{background:#f6fafc;color:#294963}
+.modules{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.module{border:1px solid #dce8f1;border-radius:14px;padding:16px;background:#fbfdff}.module b{display:block;margin-bottom:6px;color:#153b60}
 .footer{color:#74869b;text-align:center;margin-top:28px;font-size:13px}
-@media(max-width:850px){.grid{grid-template-columns:1fr}nav{position:static}.hero h1{font-size:31px}}
+@media(max-width:850px){.grid{grid-template-columns:1fr}nav{position:static}.hero h1{font-size:31px}.modules{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -29,9 +29,16 @@ nav{padding:18px;position:sticky;top:18px;height:max-content}nav h3{margin:0 0 1
 <div class="wrap">
 <section class="hero">
 <h1>ZgData Toolkit 1.4.0</h1>
-<p>Centralni dijagnostički alat za Zagreb Data cloud servise, Apross klijente, Windows print sustav i osnovnu sistemsku dijagnostiku.</p>
+<p>Centralni SysAdmin dijagnostički alat Zagreb Data: mreža i cloud, Apross, printeri, Windows resursi, storage, repair i performance dijagnostika u jednom sučelju.</p>
 <div class="badges">
-<span class="badge green">Službena verzija 1.4.0</span><span class="badge">Windows 10 / 11</span><span class="badge">64-bit</span><span class="badge">Self-contained win-x64</span><span class="badge">SysAdmin Hub</span>
+<span class="badge green">Službena verzija 1.4.0</span>
+<span class="badge">Windows 10 / 11</span>
+<span class="badge">64-bit</span>
+<span class="badge">Self-contained win-x64</span>
+<span class="badge">SysAdmin Hub</span>
+<span class="badge">Storage / SMART</span>
+<span class="badge">Windows Repair</span>
+<span class="badge">Performance / Full Gas</span>
 </div>
 </section>
 
@@ -46,147 +53,130 @@ nav{padding:18px;position:sticky;top:18px;height:max-content}nav h3{margin:0 0 1
 <a href="#printers">Printer Diagnostics</a>
 <a href="#health">System Health</a>
 <a href="#regional">Apross Regional Settings</a>
+<a href="#storage">Storage / SMART</a>
+<a href="#repair">Windows Repair &amp; Health</a>
+<a href="#performance">Performance / Full Gas</a>
 <a href="#reports">Izvještaji</a>
 <a href="#install">Instalacija</a>
-<a href="#history">Što je novo u 1.4.0</a>
+<a href="#new">Novo u aktualnom 1.4.0 buildu</a>
 </nav>
 
 <main class="content">
 <section class="card" id="overview">
 <h2>Pregled aplikacije</h2>
-<p>Verzija 1.4.0 uvodi centralni <b>SysAdmin Hub</b> iz kojeg su aktivni moduli dostupni na jednom mjestu. Postojeći Network &amp; Cloud Diagnostics ostaje osnovni workflow, a dodatni moduli služe za Apross, printere, Windows resurse i System Health.</p>
-<img class="shot" src="assets/zgdata-toolkit-1.4.0-main.png" alt="ZgData Toolkit 1.4.0 - SysAdmin Hub">
+<p>ZgData Toolkit 1.4.0 sada je centralni <b>SysAdmin Hub</b>. Aktivni moduli pokrivaju mrežu i cloud, Apross procese i resurse, printere, GDI/USER limite, System Health, diskove i SMART, Windows repair te live performance dijagnostiku.</p>
+<div class="modules">
+<div class="module"><b>Network &amp; Cloud</b>Ping, packet loss, jitter, SQL TCP, iPerf, DNS, traceroute i multi-cloud usporedbe.</div>
+<div class="module"><b>Apross Client Monitor</b>Procesi, SQL/Web/API veze, GDI/USER, handles, Private RAM i incident correlation.</div>
+<div class="module"><b>Storage / SMART</b>Diskovi, volumeni, eventovi, live I/O, session analysis, incident markers i sigurne akcije.</div>
+<div class="module"><b>Windows Repair &amp; Health</b>DISM, SFC, Windows Update dijagnostika, live output, progress i Smart Repair.</div>
+<div class="module"><b>Performance / Full Gas</b>CPU, RAM, commit, paging, processor queue, process I/O, incidenti i performance verdict.</div>
+<div class="module"><b>System Health</b>Windows build, uptime, disk, pending reboot, WHEA/storage/crash događaji i regionalni preduvjeti.</div>
+</div>
 </section>
 
-<section class="card" id="network">
-<h2>Network &amp; Cloud Diagnostics</h2>
-<ul>
-<li>Provjera lokalnog računala i aktivnog mrežnog adaptera.</li>
-<li>Internet quality, ping monitoring, packet loss i jitter.</li>
-<li>SQL TCP monitoring prema Zagreb Data endpointu.</li>
-<li>iPerf upload i download mjerenja.</li>
-<li>DNS resolution i traceroute prema odabranom profilu.</li>
-<li>Single target i Compare cloud targets način rada.</li>
-<li>HTML report nakon završenog testa.</li>
-</ul>
-</section>
+<section class="card" id="network"><h2>Network &amp; Cloud Diagnostics</h2><ul>
+<li>Internet quality: ping, packet loss i jitter.</li><li>Kontinuirani ping monitoring.</li><li>SQL TCP monitoring prema zadanom endpointu.</li><li>iPerf upload i download.</li><li>DNS resolution i traceroute.</li><li>Single target i Compare cloud targets.</li><li>HTML report.</li></ul></section>
 
-<section class="card" id="apross">
-<h2>Apross Client Monitor</h2>
-<p>Namijenjen dijagnostici lokalno pokrenutog Aprossa i procesa koje Apross pokreće ili koristi.</p>
-<ul>
+<section class="card" id="apross"><h2>Apross Client Monitor</h2><ul>
 <li>Glavni Apross proces, child procesi i pomoćni report/browser procesi.</li>
-<li>CPU, RAM, handles, GDI i USER objekti te Responding/Not responding stanje.</li>
-<li>TCP konekcije povezane s konkretnim procesom i PID-om.</li>
-<li>SQL, Web/API, file share i ostali endpointi.</li>
-<li>PROBLEM HAPPENED marker za označavanje trenutka problema.</li>
-<li>HTML/CSV izvještaj i timeline za naknadnu analizu.</li>
-</ul>
-</section>
+<li>CPU, RAM, handles, GDI, USER te Responding / Not responding.</li>
+<li>TCP veze po procesu i PID-u, uključujući SQL, Web/API, file share i ostale endpointe.</li>
+<li><b>PROBLEM HAPPENED</b> marker za točno označavanje trenutka incidenta.</li>
+<li>HTML/CSV izvještaji i timeline.</li></ul></section>
 
-<section class="card" id="guard">
-<h2>Resource Guard</h2>
-<p>Resource Guard je dio Apross Client Monitora i služi za dugotrajnije praćenje resursa kada se sumnja na GDI/USER leak ili rast drugih procesa.</p>
-<table class="table">
-<tr><th>Metrička grupa</th><th>Što se prati</th></tr>
-<tr><td>GDI</td><td>Baseline, current, peak, delta, quota, postotak iskorištenja i trend.</td></tr>
-<tr><td>USER</td><td>Baseline, current, peak, delta, quota, postotak iskorištenja i trend.</td></tr>
-<tr><td>Handles</td><td>Trenutačni broj, peak i kretanje kroz vrijeme.</td></tr>
-<tr><td>Private RAM</td><td>Privatna memorija procesa, usklađena između live prikaza i HTML reporta.</td></tr>
-</table>
-<div class="note ok">Statusi: <b>OK / Observe / Warning / Critical</b>. Prvih 60 sekundi služi za baseline; trend i leak analiza postaju pouzdaniji na duljim sesijama.</div>
-</section>
+<section class="card" id="guard"><h2>Resource Guard</h2><p>Resource Guard je dio Apross Client Monitora i služi za dugotrajno praćenje mogućeg GDI/USER leaka i rasta resursa.</p>
+<table class="table"><tr><th>Resurs</th><th>Praćenje</th></tr>
+<tr><td>GDI / USER</td><td>Baseline, current, peak, delta, quota, iskorištenje i trend.</td></tr>
+<tr><td>Handles</td><td>Trenutno stanje, peak i rast kroz sesiju.</td></tr>
+<tr><td>Private RAM</td><td>Potrošnja privatne memorije procesa i korelacija s incidentom.</td></tr></table>
+<div class="note ok">Statusi: OK / Observe / Warning / Critical. Leak analiza koristi warm-up i vremenski prozor kako kratki skokovi ne bi stvarali lažne alarme.</div></section>
 
-<section class="card" id="limits">
-<h2>GDI / USER Resource Limits</h2>
-<p>Prikazuje trenutačne sistemske kvote i realnu potrošnju Apross procesa.</p>
-<div class="note"><b>ZgData Recommended:</b> GDI 20000 / USER 10000.</div>
-<ul>
-<li><b>SET ZGDATA RECOMMENDED</b> postavlja preporučene vrijednosti.</li>
-<li><b>RESTORE WINDOWS DEFAULTS</b> vraća 10000 / 10000.</li>
-<li>Toolkit ostaje pokrenut bez administratorskih prava; samo helper za HKLM promjenu traži UAC.</li>
-<li>USER quota se ne podiže iznad 10000 bez konkretnih mjerenja koja to opravdavaju.</li>
-</ul>
-</section>
+<section class="card" id="limits"><h2>GDI / USER Resource Limits</h2>
+<div class="note"><b>ZgData preporuka za Apross:</b> GDI 20000 / USER 10000.</div>
+<ul><li>Pregled trenutnih Windows kvota i potrošnje.</li><li>Primjena preporučenih vrijednosti kroz mali UAC helper.</li><li>Toolkit ostaje standardni proces i ne radi cijeli program kao administrator.</li><li>Vraćanje Windows default vrijednosti.</li></ul></section>
 
-<section class="card" id="printers">
-<h2>Printer Diagnostics &amp; Repair</h2>
-<ul>
-<li>Inventar instaliranih printera, Windows status, port, Host/IP, driver i broj print jobova.</li>
-<li>Provjera dostupnosti mrežnog printera i print/service portova gdje je moguće.</li>
-<li>Prepoznavanje unavailable/warning printera i pregled razloga dijagnoze.</li>
-<li>Ručno osvježavanje queue kandidata i otkazivanje problematičnog print joba.</li>
-<li>Safe Repair može isključiti “Let Windows manage my default printer”.</li>
-<li>Microsoft Print to PDF može se postaviti kao siguran default kada je postojeći default nedostupan.</li>
-<li>TEST PRINT koristi klasični Windows GDI pipeline i veliki IT smiley sastavljen od 0/1 elemenata.</li>
-</ul>
-</section>
+<section class="card" id="printers"><h2>Printer Diagnostics &amp; Repair</h2><ul>
+<li>Inventar printera, status, port, Host/IP, driver i queue.</li><li>Provjera dostupnosti i mrežnih/print portova gdje je moguće.</li><li>Safe Repair za default printer.</li><li>Ručno otkazivanje problematičnog print joba.</li><li>Klasični Windows GDI TEST PRINT.</li><li>HTML report i action log.</li></ul></section>
 
-<section class="card" id="health">
-<h2>System Health</h2>
-<p>Read-only pregled osnovnog stanja Windows računala. Normalni snapshot ne zahtijeva administratorska prava.</p>
-<ul>
-<li>CPU load i model procesora.</li>
-<li>Fizički RAM: ukupno, iskorišteno i dostupno.</li>
-<li>Uptime i vrijeme zadnjeg boota.</li>
-<li>Windows edition, verzija, build i arhitektura.</li>
-<li>Slobodan prostor sistemskog diska.</li>
-<li>Pending reboot detekcija.</li>
-<li>WHEA, disk/NTFS/storage, Kernel-Power/BugCheck i application crash/hang događaji zadnja 24 sata.</li>
-<li>Overall status te pojedinačni Health checks.</li>
-<li>HTML System Health report.</li>
-</ul>
-<img class="shot" src="assets/zgdata-toolkit-1.4.0-system-health.png" alt="ZgData Toolkit 1.4.0 - System Health">
-</section>
+<section class="card" id="health"><h2>System Health</h2><ul>
+<li>CPU i fizički RAM.</li><li>Uptime i last boot.</li><li>Windows edition, version, build i arhitektura.</li><li>Slobodan prostor sistemskog diska.</li><li>Pending reboot.</li><li>WHEA, disk/NTFS/storage, Kernel-Power/BugCheck i application crash/hang eventi.</li><li>Overall status i HTML report.</li></ul></section>
 
-<section class="card" id="regional">
-<h2>Apross Regional Settings</h2>
-<p>System Health provjerava regionalne preduvjete koji su važni kod pripreme Windows računala za Apross.</p>
-<table class="table">
-<tr><th>Postavka</th><th>Vrijednost za Apross</th></tr>
-<tr><td>Culture</td><td><b>hr-HR</b></td></tr>
-<tr><td>Region</td><td><b>Croatia</b></td></tr>
+<section class="card" id="regional"><h2>Apross Regional Settings</h2>
+<table class="table"><tr><th>Postavka</th><th>Vrijednost</th></tr>
+<tr><td>Culture / Region</td><td><b>hr-HR / Croatia</b></td></tr>
 <tr><td>Short date</td><td><b>dd.MM.yy</b></td></tr>
 <tr><td>Long date</td><td><b>dd.MMMM.yyyy</b></td></tr>
 <tr><td>Short time</td><td><b>HH:mm</b></td></tr>
 <tr><td>Long time</td><td><b>HH:mm:ss</b></td></tr>
-<tr><td>System locale</td><td><b>Croatian (Croatia) / hr-HR</b></td></tr>
-</table>
-<div class="note warn">Kod APPLY APROSS SETTINGS prvo se postavlja hr-HR i Croatia, a tek nakon toga custom date/time formati. Time Windows više ne vraća hrvatske default formate poput d.M.yyyy. i H:mm.</div>
+<tr><td>System locale</td><td><b>Croatian (Croatia) / hr-HR</b></td></tr></table>
+<p>APPLY APROSS SETTINGS postavlja korisničke regionalne preduvjete, a samo promjena system locale traži UAC i može zahtijevati restart.</p></section>
+
+<section class="card" id="storage"><h2>Storage / SMART Diagnostics</h2>
+<p>Modul je namijenjen situacijama kada se server ili računalo naglo uspori i treba brzo utvrditi zakucava li ga disk, koji proces generira I/O i postoje li storage događaji.</p>
+<ul>
+<li><b>ONE-CLICK DIAGNOSTIC</b> radi snapshot diskova, volumena, relevantnih događaja, nalaza i priprema report.</li>
+<li><b>BACKGROUND MONITOR</b> prati Disk Active %, read/write MB/s, read/write latency, queue i elapsed.</li>
+<li>Live <b>Top process I/O</b> s PID-om, read/write/total throughputom i trendom.</li>
+<li>Timeline uzorci i <b>PROBLEM HAPPENED</b> incident marker.</li>
+<li><b>Session Analysis</b>: peak, prosjeci, P95, sustained pressure i zaključak postoji li storage bottleneck.</li>
+<li>Diskovi / SMART, volumeni i filtrirani storage/NTFS eventi.</li>
+<li>Event 98 healthy-volume provjere klasificiraju se kao INFO, a ne lažni warning.</li>
+<li>Action Center: CHKDSK /scan, Storage Event Viewer, Disk Management, Optimize Drives i HTML report.</li>
+<li>One-click monitoring je adaptivan i može se ostaviti u pozadini dok se rade drugi testovi.</li>
+</ul>
+<div class="note warn">Process I/O sam po sebi nije dokaz fizičkog disk bottlenecka. Modul zaključak temelji i na latency/queue/active-time signalima.</div>
 </section>
 
-<section class="card" id="reports">
-<h2>Izvještaji</h2>
+<section class="card" id="repair"><h2>Windows Repair &amp; Health</h2>
+<p>Kontrolirana Windows servisna dijagnostika i repair akcije bez potrebe da cijeli Toolkit radi elevated.</p>
 <ul>
-<li>Network &amp; Cloud Diagnostics - HTML report.</li>
-<li>Apross Client Monitor - HTML/CSV izvještaji i timeline.</li>
-<li>Resource Guard - graf GDI/USER kretanja, quota i trend podaci u HTML reportu.</li>
-<li>Printer Diagnostics - HTML printer report i action log.</li>
-<li>System Health - HTML snapshot stanja računala.</li>
+<li>Baseline pregled Windows Update / servicing eventa, servisa i pending reboota.</li>
+<li><b>DEEP HEALTH CHECK</b>: DISM /CheckHealth + SFC /verifyonly bez popravaka.</li>
+<li>Live output unutar Toolkita, bez zasebnog PowerShell prozora.</li>
+<li>Pravi progress parser za SFC i DISM; prikazuje fazu i postotak u glavnom progress baru.</li>
+<li>Component Store status: Healthy / Repairable.</li>
+<li>System Files status: No integrity violations / problem detected.</li>
+<li><b>SMART REPAIR NOW</b> pojavljuje se samo kada postoji konkretna potreba.</li>
+<li>Smart Repair može izvesti DISM /RestoreHealth i zatim potrebne provjere; preskače nepotrebne korake kada je sustav već zdrav.</li>
+<li>Action Center ima read-only DISM/SFC akcije, logove te potvrđene repair operacije koje koriste UAC samo gdje treba.</li>
+<li>HTML report i log folder.</li>
 </ul>
 </section>
 
-<section class="card" id="install">
-<h2>Instalacija i pokretanje</h2>
-<ol>
-<li>Preuzmite <b>ZgDataToolkit-1.4.0-win-x64.zip</b>.</li>
-<li>Raspakirajte ZIP u lokalni folder.</li>
-<li>Pokrenite <b>ZgDataToolkit.exe</b>.</li>
-</ol>
-<div class="note ok">Distribucija je self-contained win-x64, pa korisnik ne mora zasebno instalirati .NET runtime.</div>
+<section class="card" id="performance"><h2>Performance / Full Gas</h2>
+<p>Live dijagnostika za računala i servere koji povremeno postanu spori, uz hvatanje točnog stanja u trenutku kada korisnik prijavi problem.</p>
+<ul>
+<li>CPU load, RAM used, commit pressure i dostupna commit rezerva.</li>
+<li><b>Reported CPU clock</b> i clock ratio kao dijagnostički signal; ne proglašava automatski thermal throttling.</li>
+<li>Processor Queue Length i hard page reads / paging pressure.</li>
+<li>Live lista procesa: CPU, RAM, read/write/total I/O, handles, threads i trend.</li>
+<li>Odvojeni Top CPU, Top RAM i Top I/O offenderi.</li>
+<li><b>PROBLEM HAPPENED</b> sprema CPU, RAM, commit, clock, queue/paging i vodeće procese u trenutku incidenta.</li>
+<li>Session Analysis s peak vrijednostima, udjelom uzoraka pod visokim pritiskom i završnim verdictom.</li>
+<li>Verdicti razlikuju CPU bottleneck, memory pressure, paging pressure, CPU queue pressure, mixed pressure i visoku process I/O aktivnost.</li>
+<li>HTML report uključuje sažetak sesije i incident correlation.</li>
+<li>Full Gas akcije vode evidenciju power plana i ostaju kontrolirane/reverzibilne.</li>
+</ul>
 </section>
 
-<section class="card" id="history">
-<h2>Što je novo u 1.4.0</h2>
+<section class="card" id="reports"><h2>Izvještaji</h2>
 <ul>
-<li>Novi centralni SysAdmin Hub.</li>
-<li>Apross Resource Guard s baseline/current/peak/delta/quota/trend analizom.</li>
-<li>GDI / USER Resource Limits alat s preporučenim Zagreb Data vrijednostima.</li>
-<li>Printer Diagnostics Phase 2 i klasični GDI test print.</li>
-<li>System Health modul.</li>
-<li>Apross Regional Settings readiness i APPLY workflow.</li>
-<li>Main window se otvara maksimiziran, uz čišću navigaciju i aktivne module u Hubu.</li>
+<li>Network &amp; Cloud HTML report.</li><li>Apross HTML/CSV + timeline.</li><li>Resource Guard trend/graf podaci.</li><li>Printer report + action log.</li><li>System Health HTML report.</li><li>Storage / SMART HTML report sa session analysisom, diskovima, volumenima, procesima, timelineom i storage eventima.</li><li>Windows Repair HTML report i servisni logovi.</li><li>Performance HTML report sa session verdictom i incident correlationom.</li></ul></section>
+
+<section class="card" id="install"><h2>Instalacija i pokretanje</h2>
+<ol><li>Preuzmite <b>ZgDataToolkit-1.4.0-win-x64.zip</b>.</li><li>Raspakirajte ZIP u lokalni folder.</li><li>Pokrenite <b>ZgDataToolkit.exe</b>.</li></ol>
+<div class="note ok">Distribucija je self-contained win-x64. Korisnik ne mora zasebno instalirati .NET runtime.</div></section>
+
+<section class="card" id="new"><h2>Novo u aktualnom 1.4.0 buildu - 19.08.2026.</h2>
+<ul>
+<li><b>Storage / SMART Diagnostics</b> - kompletna disk/storage dijagnostika, background monitoring, process I/O correlation, incident marker, P95/sustained-pressure analiza, findings/actions i HTML report.</li>
+<li><b>Windows Repair &amp; Health</b> - DISM/SFC deep health check, pravi live output i progress, komponentni i system-file status, Smart Repair samo kada je potreban, Windows Update/servicing pregled i kontrolirane UAC akcije.</li>
+<li><b>Performance / Full Gas</b> - live CPU/RAM/commit/paging/queue/process telemetry, incident correlation, pressure classification, reported clock signal, offender analiza i HTML report.</li>
+<li>SysAdmin Hub sada prikazuje Storage / SMART, Windows Repair i Performance / Full Gas kao <b>ACTIVE</b>.</li>
+<li>Dodatno su polirani kontrast, Event severity klasifikacija, reportovi, adaptive monitoring i false-positive pravila.</li>
 </ul>
+<p>Prethodne 1.4.0 funkcionalnosti ostaju uključene: SysAdmin Hub, Apross Resource Guard, GDI/USER Limits, Printer Diagnostics, System Health i Apross Regional Settings.</p>
 </section>
 </main>
 </div>

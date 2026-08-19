@@ -1,3 +1,10 @@
+## 1.4.0 expanded build - 2026-08-19
+
+- Storage / SMART Diagnostics
+- Windows Repair & Health
+- Performance / Full Gas
+- Updated documentation and release notes
+
 ## 1.4.0 - 2026-08-14
 
 - SysAdmin Hub redesign
